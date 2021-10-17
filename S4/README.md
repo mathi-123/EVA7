@@ -1,5 +1,5 @@
 
-#PART 2 [250]:
+## PART 2 [250]:
 
 We have considered many points in our last 4 lectures. Some of these we have covered directly and some indirectly. They are:
 
@@ -28,7 +28,7 @@ How do we know our network is not going well, comparatively, very early
 Batch Size, and effects of batch size
 etc (you can add more if we missed it here)
 
-Refer to this code: COLABLINK
+Refer to this code: COLABLINK https://colab.research.google.com/drive/1uJZvJdi5VprOQHROtJIHy0mnY2afjNlx
 WRITE IT AGAIN SUCH THAT IT ACHIEVES
 
 99.4% validation accuracy
