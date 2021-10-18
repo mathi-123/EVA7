@@ -66,6 +66,9 @@ Submit details to S4 - Assignment QnA.
 # Solution -Assgnment Part-A
 
 Neural Network BackPropogation using Excel
+![Excel_NN](https://user-images.githubusercontent.com/91079217/137771680-50552506-ab9a-408c-b0c9-b60791869f26.jpg)
+
+
 
 Backpropagation is a method for training a neural network. Backpropagation soptimize the weights so that the neural network can learn how to correctly map arbitrary inputs to outputs. We will see backpropagation with calculations and populate it in an excel sheet.
 Here, we wll use a neural network with two inputs, two hidden neurons, two output neurons and ignore the bias.
@@ -116,11 +119,12 @@ During back propogation, we would help the network learn and get better by updat
 
 δE_total/δw5 = δ(E1 +E2)/δw5
 
-δE_total/δw5 = δ(E1)/δw5       # removing E2 as there is no impact from E2 wrt w5	
-             = (δE1/δa_o1) * (δa_o1/δo1) * (δo1/δw5)	# Using Chain Rule
-             = (δ(½ * ( t1 - a_o1)²) /δa_o1= (t1 - a_o1) * (-1) = (a_o1 - t1))   # calculate how much does the output of a_o1 change with respect Error
-                * (δ(σ(o1))/δo1 = σ(o1) * (1-σ(o1)) = a_o1                       # calculate how much does the output of o1 change with respect a_o1
-                * (1 - a_o1 )) * a_h1                                            # calculate how much does the output of w5 change with respect o1
+δE_total/δw5 = δ(E1)/δw5       
+             = (δE1/δa_o1) * (δa_o1/δo1) 
+             
+             = (δ(½ * ( t1 - a_o1)²) /δa_o1= (t1 - a_o1) * (-1) = (a_o1 - t1))   
+                   * (δ(σ(o1))/δo1 = σ(o1) * (1-σ(o1)) = a_o1                       
+                   * (1 - a_o1 )) * a_h1                                            
              = (a_o1 - t1 ) *a_o1 * (1 - a_o1 ) * a_h1
              
 Similarly, calculate the partial derivative of E_total with respect to w6, w7, w8.
@@ -167,7 +171,7 @@ Repeat this entire process for forward and backward pass until we get minimum er
 
 Below is the error graph when we change the learning rates 0.1, 0.2, 0.5, 0.8, 1.0, 2.0
 
-![image](https://user-images.githubusercontent.com/91079217/137768280-2834123f-98a2-4725-bcc5-c0c13a966264.png)
+
 
 
 Observe that with small learning rate the loss is going to drop very slowly and takes lot of time to converge, so we should always be choosing optimal learning rate neither too low nor too high (if its too high it never converges).
