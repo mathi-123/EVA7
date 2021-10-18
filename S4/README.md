@@ -73,6 +73,9 @@ Neural Network BackPropogation using Excel
 Backpropagation is a method for training a neural network. Backpropagation soptimize the weights so that the neural network can learn how to correctly map arbitrary inputs to outputs. We will see backpropagation with calculations and populate it in an excel sheet.
 Here, we wll use a neural network with two inputs, two hidden neurons, two output neurons and ignore the bias.
 
+![image](https://user-images.githubusercontent.com/91079217/137776243-e73ba579-5e78-47f4-9e23-752d74df3632.png)
+
+
 ### Here are the initial weights, to work with:
 
 w1 = 0.15	w2 = 0.2	w3 = 0.25	w4 = 0.3
