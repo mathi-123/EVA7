@@ -180,31 +180,8 @@ Observe that with small learning rate the loss is going to drop very slowly and 
 ## Part2-Solution
 ### https://github.com/mathi-123/EVA7/blob/main/S4/Session_4_Assignment2.ipynb
 
-### Model Summary
+### Model parameters
 
-----------------------------------------------------------------
-        Layer (type)               Output Shape         Param #
-================================================================
-            Conv2d-1           [-1, 16, 26, 26]             160
-              ReLU-2           [-1, 16, 26, 26]               0
-       BatchNorm2d-3           [-1, 16, 26, 26]              32
-         Dropout2d-4           [-1, 16, 26, 26]               0
-            Conv2d-5           [-1, 16, 24, 24]           2,320
-              ReLU-6           [-1, 16, 24, 24]               0
-       BatchNorm2d-7           [-1, 16, 24, 24]              32
-         Dropout2d-8           [-1, 16, 24, 24]               0
-            Conv2d-9           [-1, 32, 22, 22]           4,640
-             ReLU-10           [-1, 32, 22, 22]               0
-      BatchNorm2d-11           [-1, 32, 22, 22]              64
-        Dropout2d-12           [-1, 32, 22, 22]               0
-        MaxPool2d-13           [-1, 32, 11, 11]               0
-           Conv2d-14           [-1, 16, 11, 11]             528
-             ReLU-15           [-1, 16, 11, 11]               0
-           Conv2d-16             [-1, 16, 9, 9]           2,320
-             ReLU-17             [-1, 16, 9, 9]               0
-      BatchNorm2d-18             [-1, 16, 9, 9]              32
-      
-================================================================
 Total params: 17,882
 Trainable params: 17,882
 Non-trainable params: 0
@@ -213,8 +190,10 @@ Input size (MB): 0.00
 Forward/backward pass size (MB): 1.26
 Params size (MB): 0.07
 Estimated Total Size (MB): 1.33
+-------------------
 
-## Accuracy logs of 20 epochs
+
+### Accuracy logs of 20 epochs
 
 oss=0.01379500050097704 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 32.15it/s]
 Test set: Average loss: 0.0514, Accuracy: 9850/10000 (98.50%)
