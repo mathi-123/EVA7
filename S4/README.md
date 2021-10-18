@@ -171,7 +171,113 @@ Repeat this entire process for forward and backward pass until we get minimum er
 
 Below is the error graph when we change the learning rates 0.1, 0.2, 0.5, 0.8, 1.0, 2.0
 
-
-
+![119750792-a31fe080-beb7-11eb-948a-fe1f6d4c74c7](https://user-images.githubusercontent.com/91079217/137772103-65dedfc1-8b8a-4790-bf81-2c918e3542f6.png)
 
 Observe that with small learning rate the loss is going to drop very slowly and takes lot of time to converge, so we should always be choosing optimal learning rate neither too low nor too high (if its too high it never converges).
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Part2-Solution
+### https://github.com/mathi-123/EVA7/blob/main/S4/Session_4_Assignment2.ipynb
+
+### Model Summary
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 16, 26, 26]             160
+              ReLU-2           [-1, 16, 26, 26]               0
+       BatchNorm2d-3           [-1, 16, 26, 26]              32
+         Dropout2d-4           [-1, 16, 26, 26]               0
+            Conv2d-5           [-1, 16, 24, 24]           2,320
+              ReLU-6           [-1, 16, 24, 24]               0
+       BatchNorm2d-7           [-1, 16, 24, 24]              32
+         Dropout2d-8           [-1, 16, 24, 24]               0
+            Conv2d-9           [-1, 32, 22, 22]           4,640
+             ReLU-10           [-1, 32, 22, 22]               0
+      BatchNorm2d-11           [-1, 32, 22, 22]              64
+        Dropout2d-12           [-1, 32, 22, 22]               0
+        MaxPool2d-13           [-1, 32, 11, 11]               0
+           Conv2d-14           [-1, 16, 11, 11]             528
+             ReLU-15           [-1, 16, 11, 11]               0
+           Conv2d-16             [-1, 16, 9, 9]           2,320
+             ReLU-17             [-1, 16, 9, 9]               0
+      BatchNorm2d-18             [-1, 16, 9, 9]              32
+        Dropout2d-19             [-1, 16, 9, 9]               0
+           Conv2d-20             [-1, 32, 7, 7]           4,640
+             ReLU-21             [-1, 32, 7, 7]               0
+      BatchNorm2d-22             [-1, 32, 7, 7]              64
+        Dropout2d-23             [-1, 32, 7, 7]               0
+           Conv2d-24             [-1, 16, 7, 7]             528
+             ReLU-25             [-1, 16, 7, 7]               0
+           Conv2d-26             [-1, 16, 5, 5]           2,320
+             ReLU-27             [-1, 16, 5, 5]               0
+      BatchNorm2d-28             [-1, 16, 5, 5]              32
+        Dropout2d-29             [-1, 16, 5, 5]               0
+           Conv2d-30             [-1, 10, 5, 5]             170
+        AvgPool2d-31             [-1, 10, 1, 1]               0
+================================================================
+Total params: 17,882
+Trainable params: 17,882
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.00
+Forward/backward pass size (MB): 1.26
+Params size (MB): 0.07
+Estimated Total Size (MB): 1.33
+
+## Accuracy logs of 20 epochs
+oss=0.01379500050097704 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 32.15it/s]
+Test set: Average loss: 0.0514, Accuracy: 9850/10000 (98.50%)
+
+loss=0.037570904940366745 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.55it/s]
+Test set: Average loss: 0.0368, Accuracy: 9895/10000 (98.95%)
+
+loss=0.08293569087982178 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 33.13it/s]
+Test set: Average loss: 0.0298, Accuracy: 9899/10000 (98.99%)
+
+loss=0.011683406308293343 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.57it/s]
+Test set: Average loss: 0.0263, Accuracy: 9914/10000 (99.14%)
+
+loss=0.02773825265467167 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 33.24it/s]
+Test set: Average loss: 0.0259, Accuracy: 9916/10000 (99.16%)
+
+loss=0.049558673053979874 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.92it/s]
+Test set: Average loss: 0.0263, Accuracy: 9917/10000 (99.17%)
+
+loss=0.0351916141808033 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.36it/s]
+Test set: Average loss: 0.0197, Accuracy: 9937/10000 (99.37%)
+
+loss=0.04750240966677666 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.44it/s]
+Test set: Average loss: 0.0206, Accuracy: 9931/10000 (99.31%)
+loss=0.12883694469928741 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.72it/s]
+Test set: Average loss: 0.0189, Accuracy: 9941/10000 (99.41%)
+
+loss=0.1224433034658432 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 32.32it/s]
+Test set: Average loss: 0.0173, Accuracy: 9941/10000 (99.41%)
+
+loss=0.003706124145537615 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.46it/s]
+Test set: Average loss: 0.0183, Accuracy: 9934/10000 (99.34%)
+
+loss=0.008542485535144806 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.53it/s]
+Test set: Average loss: 0.0177, Accuracy: 9937/10000 (99.37%)
+
+loss=0.0080399289727211 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.81it/s]
+Test set: Average loss: 0.0179, Accuracy: 9944/10000 (99.44%)
+
+loss=0.09832636266946793 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 32.13it/s]
+Test set: Average loss: 0.0166, Accuracy: 9944/10000 (99.44%)
+
+loss=0.007235725875943899 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.79it/s]
+Test set: Average loss: 0.0176, Accuracy: 9940/10000 (99.40%)
+
+loss=0.000455019879154861 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 33.17it/s]
+Test set: Average loss: 0.0172, Accuracy: 9949/10000 (99.49%)
+
+loss=0.025439731776714325 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.45it/s]
+Test set: Average loss: 0.0177, Accuracy: 9938/10000 (99.38%)
+
+loss=0.07479388266801834 batch_id=937: 100%|██████████| 938/938 [00:28<00:00, 32.38it/s]
+Test set: Average loss: 0.0166, Accuracy: 9948/10000 (99.48%)
+
+
+
