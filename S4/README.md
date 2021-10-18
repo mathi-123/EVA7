@@ -181,6 +181,7 @@ Observe that with small learning rate the loss is going to drop very slowly and 
 ### https://github.com/mathi-123/EVA7/blob/main/S4/Session_4_Assignment2.ipynb
 
 ### Model Summary
+
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
 ================================================================
@@ -202,19 +203,7 @@ Observe that with small learning rate the loss is going to drop very slowly and 
            Conv2d-16             [-1, 16, 9, 9]           2,320
              ReLU-17             [-1, 16, 9, 9]               0
       BatchNorm2d-18             [-1, 16, 9, 9]              32
-        Dropout2d-19             [-1, 16, 9, 9]               0
-           Conv2d-20             [-1, 32, 7, 7]           4,640
-             ReLU-21             [-1, 32, 7, 7]               0
-      BatchNorm2d-22             [-1, 32, 7, 7]              64
-        Dropout2d-23             [-1, 32, 7, 7]               0
-           Conv2d-24             [-1, 16, 7, 7]             528
-             ReLU-25             [-1, 16, 7, 7]               0
-           Conv2d-26             [-1, 16, 5, 5]           2,320
-             ReLU-27             [-1, 16, 5, 5]               0
-      BatchNorm2d-28             [-1, 16, 5, 5]              32
-        Dropout2d-29             [-1, 16, 5, 5]               0
-           Conv2d-30             [-1, 10, 5, 5]             170
-        AvgPool2d-31             [-1, 10, 1, 1]               0
+      
 ================================================================
 Total params: 17,882
 Trainable params: 17,882
@@ -226,6 +215,7 @@ Params size (MB): 0.07
 Estimated Total Size (MB): 1.33
 
 ## Accuracy logs of 20 epochs
+
 oss=0.01379500050097704 batch_id=937: 100%|██████████| 938/938 [00:29<00:00, 32.15it/s]
 Test set: Average loss: 0.0514, Accuracy: 9850/10000 (98.50%)
 
